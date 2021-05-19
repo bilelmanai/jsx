@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactPlayer from "react-player";
+import eggs from "./Img/téléchargé.jpg";
+import "./App.css";
+import "./Style.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div
+        className="firstdiv"
+        style={{ border: "1px solid black", maxWidth: "50%" }}
+      >
+        <h1 className="title red">Manai Bilel</h1>
+        <div className="divimg">
+          <img src="/Img/thumb.png" style={{ width: "40%", height: "200px" }} />
+          <img
+            src={eggs}
+            alt="pathetic"
+            style={{ width: "40%", height: "200px" }}
+          />
+        </div>
+        <div className="video">
+          <ReactPlayer
+            controls
+            url="https://www.youtube.com/watch?v=uelHwf8o7_U"
+          />
+        </div>
+      </div>
     </div>
   );
 }
